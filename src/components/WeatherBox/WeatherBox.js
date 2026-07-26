@@ -34,9 +34,10 @@ const WeatherBox = props => {
           })
       } else {
         setError(true);
+        setPending(false);
       }
-  }, [])
-});
+    })
+  }, []);
 
   return (
     <section>
