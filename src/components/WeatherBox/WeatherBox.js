@@ -18,7 +18,7 @@ const WeatherBox = props => {
     setError(false);
 
     setPending(true);
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}&units=metric`)
       .then(res => {
         if(res.status === 200) {
 
