@@ -4,6 +4,8 @@ import Loader from '../Loader/Loader';
 import ErrorBox from '../ErrorBox/ErrorBox';
 import { useCallback, useState } from 'react';
 
+
+
 const WeatherBox = props => {
 
   const [weather, setWeather] = useState(null);
@@ -16,7 +18,7 @@ const WeatherBox = props => {
     setError(false);
 
     setPending(true);
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3ea30e2c82e0f849652eef72d490c041&units=metric`)
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}&units=metric`)
       .then(res => {
         if(res.status === 200) {
 
